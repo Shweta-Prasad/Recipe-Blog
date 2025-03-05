@@ -23,8 +23,16 @@ export default function Home() {
     <>
       <section className='home'>
           <div className='left'>
-              <h1>Food Recipe</h1>
-              <h5>This Recipe Sharing Platform allows users to discover, share, and organize their favorite recipes in an interactive and user-friendly environment.</h5>
+              <h1>Cook, Share & Enjoy! 🍳</h1>
+              <h5>Welcome to Recipe Blog, your go-to platform for discovering and sharing mouthwatering recipes! Whether you're trying something new or perfecting a family favorite, we've got you covered.
+                <br /> <br />
+
+              🥄 Explore a variety of recipes from around the world. <br />
+              📖 Create your own recipe collection. <br />
+              ❤️ Save & Favorite dishes you love. <br />
+              👩‍🍳 Join a Community of passionate food lovers. <br /> <br />
+              
+              Start sharing your recipes today!</h5>
               <button onClick={addRecipe}>Share your recipe</button>
           </div>
           <div className='right'>
