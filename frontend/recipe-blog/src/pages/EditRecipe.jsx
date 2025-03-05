@@ -9,7 +9,7 @@ export default function EditRecipe() {
 
     useEffect(() => {
         const getData = async () => {
-            await axios.get(`http://localhost:5000/recipe/${id}`)
+            await axios.get(`https://recipe-blog-backend.vercel.app/recipe/${id}`)
             .then(response => {
                 let res = response.data
                 setRecipeData({
