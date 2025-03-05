@@ -1,0 +1,5 @@
+# Environment files
+.env
+
+# Uploaded images (ignore all images inside public/images/)
+public/images/
