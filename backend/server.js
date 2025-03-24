@@ -4,12 +4,6 @@ const dotenv = require("dotenv").config()
 const connectDb = require("./config/connectionDb")
 const cors = require("cors")
 
-app.use(cors({
-  origin: "https://recipe-blog-frontend.onrender.com", // Update with your frontend URL
-  credentials: true
-}));
-
-
 const PORT = process.env.PORT || 3000
 connectDb()
 

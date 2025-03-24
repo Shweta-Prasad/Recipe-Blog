@@ -9,7 +9,7 @@ export default function EditRecipe() {
 
     useEffect(() => {
         const getData = async () => {
-            await axios.get(`https://recipe-blog-backend-3pm0.onrender.com/recipe/${id}`)
+            await axios.get(`http://localhost:5000/recipe/${id}`)
             .then(response => {
                 let res = response.data
                 setRecipeData({
@@ -32,7 +32,7 @@ export default function EditRecipe() {
     const onHandleSubmit = async (e) => {
         e.preventDefault()
         console.log(recipeData)
-        await axios.put(`https://recipe-blog-backend-3pm0.onrender.com/recipe/${id}`, recipeData,{
+        await axios.put(`http://localhost:5000/recipe/${id}`, recipeData,{
             headers:{
                 'Content-Type':'multipart/form-data',
                 'authorization':'bearer '+localStorage.getItem("token")
