@@ -8,10 +8,13 @@ import AddFoodRecipe from './pages/AddFoodRecipe';
 import EditRecipe from './pages/EditRecipe';
 import RecipeDetails from './pages/RecipeDetails';
 
+axios.defaults.withCredentials = true;
+
+
 // Fetch all recipes
 const getAllRecipes = async() => {
   let allRecipes = []
-  await axios.get('http://localhost:5000/recipe').then(res => {
+  await axios.get('https://recipe-blog-backend-3pm0.onrender.com/recipe').then(res => {
     allRecipes = res.data
   })
   return allRecipes
@@ -32,10 +35,10 @@ const getFavRecipes = async() => {
 // Fetch a single recipe with user details
 const getRecipe=async({params})=>{
   let recipe;
-  await axios.get(`http://localhost:5000/recipe/${params.id}`)
+  await axios.get(`https://recipe-blog-backend-3pm0.onrender.com/recipe/${params.id}`)
   .then(res=>recipe=res.data)
 
-  await axios.get(`http://localhost:5000/user/${recipe.createdBy}`)
+  await axios.get(`https://recipe-blog-backend-3pm0.onrender.com/user/${recipe.createdBy}`)
   .then(res=>{
     recipe={...recipe,email:res.data.email}
   })
